@@ -1,0 +1,15 @@
+.box{
+  width: 40px;
+  height: 40px;
+  background: skyblue;
+  cursor: pointer;
+}
+
+.box:hover{
+  /* transform: translate(20px, 10px); translateはXとY方向を移動 */
+  /* transform: rotate(45deg);rotateは回転、45deg角度をつける */
+  /* scale中心から拡大する、1.5なら1.5倍、0.5なら0.5倍 */
+  transform: scale(1.5) rotate(45deg);
+  /* 変形の機転を指定 */
+  transform-origin: left top;;
+}
