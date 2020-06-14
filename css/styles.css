@@ -4,18 +4,20 @@
   background: skyblue;
   cursor: pointer;
   transition: 2s;
-  transition-timing-function: ease;
+  /* transition-timing-function: ease-in-out; */
 }
 
 .box.moved{
-  transform: translate(400px, 0);
-}
-
-.box2{
-  transition-timing-function: ease-out;
-}
-.box3{
+  animation-name: spin;
+  animation-duration: 2s;
+  /* animation-iteration-count: infinite;animationする回数指定 */
   transition-timing-function: ease-in-out;
-  height: 180px;
-  background: #333;
+  /* animation-direction: alternate; */
+  animation-fill-mode: forwards;
+}
+@keyframes spin{
+  0%{ transform: none;}
+  50%{ transform: rotate(270deg) scale(0.8);border-radius: 50%;}
+  80%{ transform: rotate(320deg) scale(1.8);}
+  100%{ transform: rotate(360deg) scale(0.2) translate(0, 200px);}
 }
